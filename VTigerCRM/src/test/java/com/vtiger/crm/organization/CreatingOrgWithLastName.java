@@ -25,10 +25,10 @@ public class CreatingOrgWithLastName extends BaseClass{
 		
 		op.getNewOrgLink().click();
 		
-		String orgname =xu.getDataFromExcel("org", 1, 2).toString()+ju.getRandomNumber();
-		String shippingAddress = xu.getDataFromExcel("org", 1, 2).toString();
+		String orgname =xu.getDataFromExcel("data", 1, 0).toString()+ju.getRandomNumber();
+		String shippingAddress = xu.getDataFromExcel("data", 1, 0).toString();
 
-		n.createOrg("Mahi", "Mahi");
+		n.createOrg(orgname,shippingAddress);
 		
 		Thread.sleep(2000);
 		String header =new OrganizationCreatingConformationPage(driver).getHeader().getText();
